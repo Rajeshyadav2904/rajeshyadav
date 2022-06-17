@@ -1,0 +1,76 @@
+<p>forms works!</p>
+
+<form>
+
+    <table >
+        <p>
+            <caption><b>Amazon From</b></caption>
+
+        </p>
+    
+        <tr>
+            <th>Firstname</th>
+    
+            <td><input type="text" id="txtname" min="6" max="25" required placeholder="Enter Your first Name" formControlName="Firstname" /></td>
+    
+        </tr>
+    
+        <tr>
+    
+            <th>Lastname :</th>
+    
+            <td><input type="text" id="txtname" min="6" max="25" required placeholder="Enter Your Last Name" formControlName="LastName"/></td>
+    
+        </tr>
+    
+        <tr>
+    
+            <th>Email :</th>
+    
+            <td><input type="email" id="txtemail" name="txtEmail" maxlength="50" size="40"
+    
+                    placeholder="Enter your email Address"  formControlName="Email"/> </td>
+    
+        </tr>
+    
+        <tr>
+    
+
+     <th>Gender</th>
+    
+            <td><input type="radio" id="rbtngender" name="Gender" value="M"  formControlName="Gender"/>Male
+    
+                <input type="radio" id="rbtngender" name="Gender" value="F" formControlName="Gender" />Female
+    
+            </td>
+    
+        </tr>
+    
+        <tr>
+    
+            <th>Country:</th>
+            <select name="country" id="country" >
+                <option value="India">India</option>
+                <option [value]="defaultCountry" [defaultSelected]="true">{{defaultCountry}}</option>
+                <option *ngFor="let c of country" [value]="c" >{{c}}</option>
+            </select>
+    
+            
+        </tr>
+    
+        <tr>
+    
+            <td > <button (click)=submitted() >Submit</button>
+    
+     <BR>
+    
+            <td>  <button (click)=cancelled() >cancel</button></td>
+    
+        </tr>
+    
+    </table>
+</form>
+    
+
+    
+    
